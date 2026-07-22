@@ -1,0 +1,13 @@
+Machine Learning
+      │
+      ├── Supervised Learning
+      │        ├── Regression
+      │        └── Classification
+      │
+      ├── Unsupervised Learning
+      │        ├── Clustering
+      │        └── Pattern Discovery
+      │
+      └── Reinforcement Learning
+               ├── Rewards
+               └── Penalties
