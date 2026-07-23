@@ -1,0 +1,31 @@
+User Prompt
+      │
+      ▼
+Tokenizer
+      │
+      ▼
+Embeddings
+      │
+      ▼
+LLM
+      │
+      ▼
+Generated Response
+
+
+
+## another architecture:
+
+User Question
+       │
+       ▼
+Vector Search
+       │
+       ▼
+Relevant Documents
+       │
+       ▼
+LLM
+       │
+       ▼
+Response
