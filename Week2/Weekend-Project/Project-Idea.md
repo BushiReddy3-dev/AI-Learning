@@ -1,19 +1,24 @@
-# IDD Tech Knowledge Assistant
+# Project
+
+IDD Tech Knowledge Assistant
 
 ## Goal
 
 Create an AI assistant using:
 
 - Azure OpenAI
-- Azure AI Search
-- .NET API
+- ASP.NET Core API
+- Azure App Service
+- SQL Server
 
 ## Features
 
 - Ask project questions
-- Search knowledge
 - Generate summaries
+- Developer assistance
 
-## Future
+## Future Enhancements
 
-This project will evolve through Week 2 and Week 3.
+- Azure AI Search
+- RAG
+- AI Agents

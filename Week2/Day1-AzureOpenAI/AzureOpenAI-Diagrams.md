@@ -5,15 +5,25 @@
 ## Flow
 
 User
+
 ↓
+
 Web Application
+
 ↓
+
 .NET API
+
 ↓
+
 Azure OpenAI
+
 ↓
+
 GPT Deployment
+
 ↓
+
 Response
 
 ## Benefits

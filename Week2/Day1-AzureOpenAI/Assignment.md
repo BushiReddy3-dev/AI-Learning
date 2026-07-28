@@ -25,5 +25,7 @@ Vs
 2. What is a deployment?
 3. What is the role of Azure AI Foundry?
 4. Which model would you recommend for enterprise applications?
+5. What security features are available in Azure OpenAI?
+6. Which GPT model would you recommend for an enterprise assistant and why?
 
 Provide your answers in your own words.

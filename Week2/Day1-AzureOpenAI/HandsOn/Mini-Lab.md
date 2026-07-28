@@ -1,32 +1,35 @@
 # Mini Lab
 
-Goal:
+## Goal
 
-Understand enterprise AI architecture.
+Design a simple AI Assistant Architecture.
 
-Task:
+### Scenario
 
-Design an AI assistant for IDD Tech.
+Build an AI assistant for IDD Tech.
 
-Requirements:
+Features:
 
-- Users ask project questions.
-- AI responds using GPT.
-- Backend is .NET API.
+- Answer project-related questions
+- Generate summaries
+- Assist developers
 
-Draw:
+### Architecture
 
 User
 ↓
-Web App
+Web Application
 ↓
 .NET API
 ↓
 Azure OpenAI
 
-Questions:
+### Questions
 
 1. How will users authenticate?
-2. How will secrets be stored?
-3. How will usage be monitored?
-4. What security controls are required?
+2. Where will secrets be stored?
+3. How will monitoring be implemented?
+4. What Azure security controls are required?
+5. Which GPT model would be used and why?
+
+Document your answers.

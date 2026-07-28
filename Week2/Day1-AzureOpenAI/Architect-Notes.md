@@ -1,15 +1,23 @@
-# Architect Notes
+# Azure OpenAI Architecture Notes
 
 ## Enterprise Architecture
 
 User
+
 ↓
+
 Web App
+
 ↓
+
 .NET API
+
 ↓
+
 Azure OpenAI
+
 ↓
+
 GPT Deployment
 
 ---
@@ -19,34 +27,34 @@ GPT Deployment
 - Managed Identity
 - Private Endpoints
 - RBAC
-- Key Vault
+- Azure Key Vault
 - Azure Monitor
 
 ---
 
 ## Cost Optimization
 
-- Use correct model
-- Minimize tokens
-- Cache responses
-- Monitor usage
+- Use the right model
+- Reduce unnecessary tokens
+- Cache frequent responses
+- Monitor consumption
 
 ---
 
-## Use Cases
+## Enterprise Use Cases
 
 ### HR Assistant
 
-Employee queries
+Policy questions
 
 ### IT Support Assistant
 
-Knowledge search
+Knowledge retrieval
 
 ### Project Copilot
 
-Project documentation
+Project documents and status
 
-### Developer Assistant
+### Developer Copilot
 
-Code generation
+Code generation and review
