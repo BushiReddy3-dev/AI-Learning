@@ -1,84 +1,69 @@
 # Week 1 - Day 5 Training Guide
 
-# Prompt Engineering Masterclass & Azure OpenAI Playground
+# Prompt Engineering Masterclass (Solution Architect Track)
 
-## Duration
+Prompt Engineering is one of the most important skills in your AI learning journey because it is the foundation for ChatGPT, Microsoft Copilot, GitHub Copilot, Copilot Studio, Azure OpenAI, AI Agents, and RAG-based enterprise solutions.
+
+---
+
+# Duration
 
 2 Hours
 
 ---
 
-# Learning Goals
+# Learning Objectives
 
-By the end of Day 5, you should understand:
+By the end of Day 5, you will understand:
 
 - What is Prompt Engineering
-- Why Prompt Engineering Matters
-- Types of Prompts
+- Why Prompt Engineering matters
 - Zero-Shot Prompting
 - One-Shot Prompting
 - Few-Shot Prompting
 - Chain of Thought Prompting
 - Role-Based Prompting
-- Azure OpenAI Playground Basics
-- Enterprise Prompt Design
-- Common Prompting Mistakes
-
----
-
-# Why Day 5 is Important?
-
-Prompt Engineering is the skill that makes Generative AI more effective.
-
-The same model can produce:
-
-- Poor Output
-- Good Output
-- Excellent Output
-
-depending on the prompt quality.
-
----
-
-# Learning Resources
-
-## Microsoft Generative AI for Beginners
-
-https://microsoft.github.io/generative-ai-for-beginners/
-
-## Prompt Engineering Guide
-
-https://www.promptingguide.ai/
-
-## Azure OpenAI Documentation
-
-https://learn.microsoft.com/azure/ai-services/openai/
+- Structured Output Prompting
+- Prompt Optimization Techniques
+- Azure OpenAI Playground basics
+- Enterprise Prompt Patterns
+- Architect-level Prompt Design
 
 ---
 
 # Day 5 Agenda
 
-| Activity | Duration |
-|-----------|-----------|
-| Theory | 60 Minutes |
-| Hands-On | 45 Minutes |
-| Assignment | 15 Minutes |
+| Section | Duration | Activity |
+|---|---:|---|
+| Theory | 60 min | Learn prompt engineering concepts |
+| Hands-on | 45 min | Practice different prompt patterns |
+| Assignment | 15 min | Create enterprise prompts |
 
 ---
 
-# Topic 1: What is Prompt Engineering?
+# Part 1: Theory
 
-Prompt Engineering is the process of designing effective prompts to obtain better responses from AI models.
+## 1. What is Prompt Engineering?
+
+Prompt Engineering is the process of writing clear and effective instructions to get better responses from AI models.
+
+A prompt is the input that we give to an AI model.
+
+The quality of the prompt directly impacts the quality of the output.
 
 ---
 
-## Example
+## 2. Why Prompt Engineering Matters
 
-### Weak Prompt
+The same AI model can produce different quality outputs depending on the prompt.
+
+### Poor Prompt
 
 ```text
 Explain Azure.
 ```
+
+This may produce a generic answer.
 
 ### Better Prompt
 
@@ -95,68 +80,91 @@ Include:
 4. Cost Considerations
 5. Alternatives
 
-Format response in Markdown.
+Provide the response in Markdown format.
 ```
+
+This produces a more detailed and architect-level response.
 
 ---
 
-# Topic 2: Prompt Structure
+# 3. Prompt Formula
 
-Good prompts usually contain:
+A good prompt usually follows this formula:
 
 ```text
-Role
-+
-Task
-+
-Context
-+
-Output Format
+Role + Task + Context + Output Format
+```
+
+## Explanation
+
+### Role
+
+Tell the AI what role to act as.
+
+Example:
+
+```text
+Act as an Azure Solution Architect.
+```
+
+### Task
+
+Tell the AI what it needs to do.
+
+Example:
+
+```text
+Design a secure document processing solution.
+```
+
+### Context
+
+Give background information.
+
+Example:
+
+```text
+The audience has 10 years of .NET and Azure experience.
+```
+
+### Output Format
+
+Tell the AI how to structure the response.
+
+Example:
+
+```text
+Provide output as a Markdown table with recommendations.
 ```
 
 ---
+
+# 4. Zero-Shot Prompting
+
+Zero-shot prompting means asking the AI to perform a task without giving any example.
 
 ## Example
 
 ```text
-Role:
-Act as a Senior Azure Architect
-
-Task:
-Explain Azure Event Grid
-
-Context:
-Audience has 10 years of .NET experience
-
-Output:
-Provide architecture diagram and key points
-```
-
----
-
-# Topic 3: Zero-Shot Prompting
-
-No examples are provided.
-
----
-
-## Example
-
-```text
-Translate this sentence to French:
+Translate the following sentence into French:
 
 Hello, how are you?
 ```
 
-The model performs the task without examples.
+## When to Use
+
+Use zero-shot prompting for:
+
+- Simple questions
+- General explanations
+- Quick translations
+- Basic summarization
 
 ---
 
-# Topic 4: One-Shot Prompting
+# 5. One-Shot Prompting
 
-One example is provided.
-
----
+One-shot prompting means giving one example before asking the AI to complete the task.
 
 ## Example
 
@@ -169,7 +177,7 @@ Good Morning
 Output:
 Bonjour
 
-Translate:
+Now translate:
 
 Input:
 How are you?
@@ -177,301 +185,408 @@ How are you?
 Output:
 ```
 
----
+## Benefit
 
-# Topic 5: Few-Shot Prompting
-
-Multiple examples are provided.
+One example helps the AI understand the expected pattern.
 
 ---
+
+# 6. Few-Shot Prompting
+
+Few-shot prompting means giving multiple examples before asking the AI to perform the task.
 
 ## Example
 
 ```text
-Input: Good Morning
-Output: Bonjour
+Input:
+Good Morning
 
-Input: Thank You
-Output: Merci
+Output:
+Bonjour
 
-Input: How Are You
+Input:
+Thank You
+
+Output:
+Merci
+
+Input:
+How Are You
+
 Output:
 ```
 
-This improves accuracy.
+## Benefits
+
+Few-shot prompting improves:
+
+- Accuracy
+- Consistency
+- Formatting
+- Pattern understanding
 
 ---
 
-# Topic 6: Role-Based Prompting
+# 7. Role-Based Prompting
 
-Assign a role to the AI.
+Role-based prompting means asking the AI to respond from a specific role or perspective.
 
----
+## Example Roles
 
-## Example
+```text
+Act as an Azure Solution Architect.
+```
+
+```text
+Act as a Senior .NET Architect.
+```
 
 ```text
 Act as a Project Manager.
 ```
 
 ```text
-Act as a Solution Architect.
-```
-
-```text
 Act as a Technical Interviewer.
 ```
 
----
-
-## Benefits
-
-- Better responses
-- More context-aware answers
-- Structured outputs
-
----
-
-# Topic 7: Chain of Thought Prompting
-
-Ask the model to think step-by-step.
-
----
-
-## Example
-
 ```text
-Solve this problem step by step.
+Act as a Security Consultant.
 ```
 
-Benefits:
-
-- Better reasoning
-- Reduced mistakes
-- Improved explanations
-
----
-
-# Topic 8: Structured Output Prompting
-
-Force the model to return a structured format.
-
----
-
-## Example
-
-```text
-Provide response in:
-
-1. Summary
-2. Risks
-3. Recommendations
-4. Action Items
-```
-
----
-
-# Topic 9: Enterprise Prompt Patterns
-
-As an Azure Solution Architect, these prompts are useful.
-
----
-
-## Architecture Prompt
+## Example Prompt
 
 ```text
 Act as an Azure Solution Architect.
 
-Design a scalable document processing solution using:
-
-- Azure OpenAI
-- Azure AI Search
-- Azure Storage
+Explain Azure Service Bus for enterprise integration.
 
 Include:
 
 - Architecture
-- Data Flow
+- Use cases
 - Security
-- Cost Considerations
+- Cost considerations
+- Alternatives
 ```
 
 ---
 
-## Code Review Prompt
+# 8. Chain of Thought Prompting
+
+Chain of Thought prompting asks the AI to solve or explain something step by step.
+
+## Example
+
+```text
+Think step by step.
+
+Design a secure Azure OpenAI architecture for an enterprise application.
+```
+
+## Benefits
+
+This improves:
+
+- Reasoning
+- Clarity
+- Analysis
+- Accuracy
+- Decision-making
+
+---
+
+# 9. Structured Output Prompting
+
+Structured output prompting tells the AI exactly how the response should be organized.
+
+## Example
+
+```text
+Provide the response in the below format:
+
+1. Summary
+2. Architecture
+3. Risks
+4. Recommendations
+5. Action Items
+```
+
+## Useful For
+
+- Meeting summaries
+- Architecture reviews
+- Status reports
+- Project plans
+- Risk assessments
+- Technical documentation
+
+---
+
+# 10. Enterprise Prompt Patterns
+
+As an Azure AI Solution Architect, you should practice enterprise-level prompts.
+
+---
+
+## 10.1 Architecture Design Prompt
+
+```text
+Act as an Azure Solution Architect.
+
+Design an enterprise document processing solution using:
+
+- Azure OpenAI
+- Azure AI Search
+- Azure Blob Storage
+- Azure Functions
+
+Include:
+
+1. Architecture
+2. Data Flow
+3. Security
+4. Monitoring
+5. Cost Considerations
+6. Alternatives
+
+Provide the response in Markdown format.
+```
+
+---
+
+## 10.2 Code Review Prompt
 
 ```text
 Act as a Senior .NET Architect.
 
-Review the below code.
+Review the below API code.
 
 Identify:
 
-- Security Issues
-- Performance Issues
-- Best Practices
-- Suggested Improvements
+1. Security issues
+2. Performance issues
+3. Code smells
+4. Best practices
+5. Suggested improvements
+
+Provide the response in table format.
 ```
 
 ---
 
-## Meeting Summary Prompt
+## 10.3 Meeting Summary Prompt
 
 ```text
-Summarize the meeting.
+Summarize the meeting notes.
 
 Provide:
 
-- Key Discussions
-- Decisions
-- Risks
-- Action Items
+1. Key Discussions
+2. Decisions Taken
+3. Risks
+4. Open Questions
+5. Action Items with Owner and Due Date
 ```
 
 ---
 
-# Topic 10: Azure OpenAI Playground
-
-The Playground is used to:
-
-- Test prompts
-- Evaluate responses
-- Compare prompt variations
-- Experiment with temperature settings
-
----
-
-## Playground Workflow
+## 10.4 Project Plan Prompt
 
 ```text
-Prompt
-   ↓
-Model
-   ↓
-Response
-   ↓
-Improve Prompt
-   ↓
-Better Response
+Act as a Project Manager.
+
+Create a project plan for implementing Azure OpenAI in an enterprise application.
+
+Include:
+
+1. Phases
+2. Tasks
+3. Dependencies
+4. Risks
+5. Deliverables
+6. Timeline format
 ```
 
 ---
 
-# Topic 11: Common Prompt Mistakes
+## 10.5 Risk Assessment Prompt
 
-## Bad Example
+```text
+Act as an AI Governance Consultant.
+
+Identify risks in a Generative AI solution.
+
+Include:
+
+1. Security risks
+2. Privacy risks
+3. Hallucination risks
+4. Compliance risks
+5. Mitigation strategy
+```
+
+---
+
+# 11. Prompt Optimization Techniques
+
+## Technique 1: Be Specific
+
+Instead of:
 
 ```text
 Explain cloud.
 ```
 
-Problem:
-
-- Too vague
-
----
-
-## Better Example
-
-```text
-Explain Azure Service Bus
-for a .NET architect.
-
-Include:
-
-- Architecture
-- Security
-- Pros
-- Cons
-
-Provide response as Markdown.
-```
-
----
-
-# Topic 12: Prompt Optimization Tips
-
-### Be Specific
-
-Instead of:
-
-```text
-Explain Azure
-```
-
 Use:
 
 ```text
-Explain Azure Service Bus
-for enterprise integration.
+Explain Azure Service Bus for enterprise application integration.
 ```
 
 ---
 
-### Use Roles
+## Technique 2: Use a Role
 
 ```text
-Act as Azure Architect.
+Act as an Azure Solution Architect.
 ```
 
 ---
 
-### Use Output Formatting
+## Technique 3: Add Context
 
 ```text
-Provide response in markdown.
+The audience has 12 years of .NET and Azure experience.
 ```
 
 ---
 
-### Include Audience
+## Technique 4: Define Output Format
 
 ```text
-Audience: .NET Developers
+Provide the response as a Markdown table.
 ```
 
 ---
 
-### Ask for Examples
+## Technique 5: Ask for Examples
 
 ```text
-Include real-world examples.
+Include real-world enterprise examples.
 ```
 
 ---
 
-# Hands-On Activity
-
-## Create Folder Structure
+## Technique 6: Ask for Pros and Cons
 
 ```text
-Week1
+Include benefits, limitations, and alternatives.
+```
+
+---
+
+## Technique 7: Ask for Step-by-Step Explanation
+
+```text
+Explain the solution step by step.
+```
+
+---
+
+# 12. Azure OpenAI Playground Basics
+
+Azure OpenAI Playground is used to test prompts and evaluate model responses.
+
+## Playground Workflow
+
+```text
+Prompt
+  ↓
+AI Model
+  ↓
+Response
+  ↓
+Improve Prompt
+  ↓
+Better Response
+```
+
+## What You Can Practice
+
+- Test different prompts
+- Compare model responses
+- Adjust temperature
+- Improve output format
+- Test enterprise scenarios
+
+---
+
+# 13. Temperature in Prompting
+
+Temperature controls creativity.
+
+## Low Temperature
+
+```text
+0.1 to 0.3
+```
+
+Best for:
+
+- Accurate answers
+- Technical documentation
+- Code review
+- Business summaries
+
+## High Temperature
+
+```text
+0.7 to 1.0
+```
+
+Best for:
+
+- Creative writing
+- Brainstorming
+- Idea generation
+
+---
+
+# Part 2: Hands-On Activity
+
+## Step 1: Create Day 5 Folder Structure
+
+Create this folder structure in your GitHub repository:
+
+```text
+AI-Learning
 │
-├── Day1
-├── Day2
-├── Day3
-├── Day4
-│
-└── Day5
-     │
-     ├── Notes.md
-     ├── Prompt-Diagrams.md
-     ├── Assignment.md
-     ├── Architect-Notes.md
-     ├── PromptEngineering.drawio
-     └── PromptEngineering.png
+└── Week1
+    ├── Day1
+    ├── Day2
+    ├── Day3
+    ├── Day4
+    └── Day5
+        ├── Notes.md
+        ├── Prompt-Diagrams.md
+        ├── Assignment.md
+        ├── Architect-Notes.md
+        ├── PromptEngineering.drawio
+        └── PromptEngineering.png
 ```
 
 ---
 
-# Notes.md
+# Content for Notes.md
+
+Paste the below content into `Week1/Day5/Notes.md`:
 
 ```markdown
 # Day 5 Notes - Prompt Engineering
 
 ## What is Prompt Engineering?
 
-Prompt Engineering is the process of designing prompts to get better AI responses.
+Prompt Engineering is the process of writing effective instructions to get better responses from AI models.
 
 ## Prompt Formula
 
@@ -479,36 +594,51 @@ Role + Task + Context + Output Format
 
 ## Prompting Techniques
 
-### Zero-Shot
+### Zero-Shot Prompting
 
-No examples provided.
+No example is provided.
 
-### One-Shot
+### One-Shot Prompting
 
-Single example provided.
+One example is provided.
 
-### Few-Shot
+### Few-Shot Prompting
 
-Multiple examples provided.
-
-### Chain of Thought
-
-Ask the model to think step-by-step.
+Multiple examples are provided.
 
 ### Role-Based Prompting
 
-Assign a role such as Architect, Developer or Project Manager.
+The AI is asked to act as a specific role.
 
-## Key Learning
+Examples:
 
-Prompt quality directly impacts response quality.
+- Azure Architect
+- Project Manager
+- Security Consultant
+- Technical Interviewer
+
+### Chain of Thought Prompting
+
+The AI is asked to solve or explain step by step.
+
+### Structured Output Prompting
+
+The AI is asked to provide output in a specific format.
+
+## Key Learnings
+
+- Prompt quality impacts AI response quality.
+- Role-based prompts improve context.
+- Few-shot prompts improve consistency.
+- Structured prompts improve readability.
+- Prompt Engineering is important for Azure OpenAI, Copilot Studio, and AI Agents.
 ```
 
 ---
 
-# Draw.io Diagram
+# Draw.io Diagram Guidance
 
-Create the following diagram:
+Create the following prompt engineering diagram in Draw.io:
 
 ```text
 User Prompt
@@ -532,13 +662,13 @@ LLM
 Response
 ```
 
-Save as:
+Save the editable diagram as:
 
 ```text
 PromptEngineering.drawio
 ```
 
-Export as:
+Export the image as:
 
 ```text
 PromptEngineering.png
@@ -546,12 +676,16 @@ PromptEngineering.png
 
 ---
 
-# Prompt-Diagrams.md
+# Content for Prompt-Diagrams.md
+
+Paste the below content into `Week1/Day5/Prompt-Diagrams.md`:
 
 ```markdown
-# Prompt Engineering Architecture
+# Prompt Engineering Diagrams
 
-PromptEngineering.png
+## Prompt Engineering Flow
+
+![Prompt Engineering](PromptEngineering.png)
 
 ## Components
 
@@ -561,7 +695,7 @@ Defines who the model should act as.
 
 ### Task
 
-Specifies what needs to be done.
+Defines what the model should do.
 
 ### Context
 
@@ -569,84 +703,155 @@ Provides background information.
 
 ### Output Format
 
-Defines response structure.
+Defines how the response should be structured.
 
-### Response
+### LLM
 
-Generated by the LLM.
+Processes the prompt and generates a response.
 
 ## Learning Outcome
 
-Better prompts generate better results.
+A well-structured prompt improves response quality, consistency, and usefulness.
 ```
 
 ---
 
-# Assignment.md
+# Content for Assignment.md
+
+Paste the below content into `Week1/Day5/Assignment.md`:
 
 ```markdown
 # Day 5 Assignment
 
-## Create Prompts for the Following
+## Create Prompts for the Following Scenarios
 
 ### 1. Azure Architecture Design
 
-Design a secure Azure document processing solution.
+Create a prompt to design a secure Azure AI solution.
 
 ### 2. Code Review
 
-Review a .NET API for security and performance.
+Create a prompt to review a .NET API for security and performance.
 
 ### 3. Meeting Summary
 
-Summarize a meeting and generate action items.
+Create a prompt to summarize a project status meeting.
 
 ### 4. Project Plan
 
-Create a project plan for AI implementation.
+Create a prompt to prepare an Azure OpenAI implementation project plan.
 
 ### 5. Risk Assessment
 
-Identify risks in an Azure OpenAI solution.
+Create a prompt to identify risks in a Generative AI solution.
 
-## My Learning
+---
 
-- Prompt quality impacts AI quality.
-- Role-based prompting improves responses.
-- Few-shot prompting improves consistency.
-- Chain of Thought improves reasoning.
+## Sample Answers
+
+### Azure Architecture Design Prompt
+
+```text
+Act as an Azure Solution Architect.
+
+Design a secure Azure AI solution using Azure OpenAI, Azure AI Search, and Azure Blob Storage.
+
+Include architecture, data flow, security, monitoring, cost considerations, and risks.
+
+Provide the response in Markdown format.
+```
+
+### Code Review Prompt
+
+```text
+Act as a Senior .NET Architect.
+
+Review the below API code and identify security issues, performance issues, code smells, and best practice improvements.
+
+Provide the output in table format.
+```
+
+### Meeting Summary Prompt
+
+```text
+Summarize the project meeting notes.
+
+Provide key discussions, decisions, risks, open questions, and action items with owners and due dates.
+```
+
+### Project Plan Prompt
+
+```text
+Act as a Project Manager.
+
+Create a project plan for implementing Azure OpenAI in an enterprise application.
+
+Include phases, tasks, dependencies, risks, deliverables, and milestones.
+```
+
+### Risk Assessment Prompt
+
+```text
+Act as an AI Governance Consultant.
+
+Identify risks in a Generative AI solution.
+
+Include security, privacy, data leakage, hallucination, compliance, and mitigation strategy.
 ```
 
 ---
 
-# Architect-Notes.md
+## My Learning
+
+- Prompt quality impacts AI response quality.
+- Role-based prompting improves context.
+- Few-shot prompting improves consistency.
+- Structured output improves readability.
+- Prompt Engineering is critical for enterprise AI solutions.
+```
+
+---
+
+# Content for Architect-Notes.md
+
+Paste the below content into `Week1/Day5/Architect-Notes.md`:
 
 ```markdown
 # Prompt Engineering for Solution Architects
 
+## Why Prompt Engineering Matters for Architects
+
+AI Solution Architects use prompts to design, review, document, and validate AI solutions.
+
 ## Common Architect Prompts
 
-### Architecture Review
+### Architecture Review Prompt
 
-Act as an Azure Architect.
+```text
+Act as an Azure Solution Architect.
 
-Review the architecture and identify:
+Review the architecture and identify security risks, scalability issues, performance bottlenecks, and cost optimization opportunities.
+```
 
-- Security Risks
-- Performance Issues
-- Cost Optimization Opportunities
+### RAG Solution Prompt
 
-### AI Solution Design
+```text
+Act as a Senior AI Architect.
 
-Design an enterprise AI solution using:
+Design a RAG solution using Azure OpenAI, Azure AI Search, and Azure Blob Storage.
 
-- Azure OpenAI
-- Azure AI Search
-- Azure Storage
+Include architecture, data flow, chunking strategy, embeddings, security, monitoring, and cost optimization.
+```
 
-### Cost Optimization
+### Copilot Studio Prompt
 
-Recommend Azure cost optimization strategies.
+```text
+Act as a Copilot Studio Architect.
+
+Design an enterprise Copilot agent for employee exit management.
+
+Include topics, actions, Power Automate flows, authentication, security, and escalation process.
+```
 
 ## Enterprise Use Cases
 
@@ -656,36 +861,52 @@ Recommend Azure cost optimization strategies.
 - Document Processing
 - Knowledge Management
 - Chatbots
+- Code Review
+- Meeting Summaries
+- Risk Analysis
+
+## Architect Learning
+
+Prompt Engineering helps Solution Architects communicate clearly with AI models and produce better technical designs, documentation, and implementation plans.
 ```
 
 ---
 
-# Git Commit
+# GitHub Push Steps Using github.dev
 
-```bash
-git add .
-git commit -m "Completed Week1 Day5 Prompt Engineering Masterclass"
-git push origin main
+1. Open your GitHub repository.
+2. Press `.` to open github.dev.
+3. Create `Week1/Day5` folder.
+4. Add the Day 5 markdown files.
+5. Upload Draw.io file and PNG image.
+6. Open Source Control from the left side.
+7. Enter commit message:
+
+```text
+Completed Week1 Day5 Prompt Engineering Masterclass
 ```
+
+8. Click Commit.
+9. Click Sync Changes or Push.
 
 ---
 
 # Day 5 Completion Checklist
 
-- [ ] Created Day5 folder
-- [ ] Completed Notes.md
-- [ ] Completed Prompt-Diagrams.md
-- [ ] Completed Assignment.md
-- [ ] Completed Architect-Notes.md
+- [ ] Created Week1/Day5 folder
+- [ ] Created Notes.md
+- [ ] Created Prompt-Diagrams.md
+- [ ] Created Assignment.md
+- [ ] Created Architect-Notes.md
 - [ ] Created PromptEngineering.drawio
 - [ ] Exported PromptEngineering.png
-- [ ] Committed Code to GitHub
+- [ ] Committed and pushed changes to GitHub
 
 ---
 
 # Day 5 Outcome
 
-You should now understand:
+After Day 5, you should be able to explain and use:
 
 - Prompt Engineering
 - Zero-Shot Prompting
@@ -693,17 +914,35 @@ You should now understand:
 - Few-Shot Prompting
 - Chain of Thought Prompting
 - Role-Based Prompting
+- Structured Output Prompting
 - Enterprise Prompt Design
 - Azure OpenAI Playground Basics
 - Prompt Optimization Techniques
 
-## Next Step (Week 2)
+---
+
+# Week 1 Completion Summary
+
+By the end of Week 1, you completed:
+
+- Day 1: AI Fundamentals
+- Day 2: Machine Learning Fundamentals
+- Day 3: Deep Learning and Neural Networks
+- Day 4: Generative AI, LLMs, Tokens and Embeddings
+- Day 5: Prompt Engineering Masterclass
+
+---
+
+# Week 2 Preview
+
+Week 2 will focus on:
 
 - Azure OpenAI Service
 - GPT Models
+- Embeddings
 - Azure AI Search
 - RAG Implementation
-- AI Agents
 - Azure AI Foundry
+- AI Agents
 - Copilot Studio
 - Enterprise AI Architecture
