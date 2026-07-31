@@ -1,0 +1,25 @@
+Blob Storage
+      │
+      ▼
+Indexer
+      │
+      ▼
+Azure AI Search
+      │
+      ▼
+Retriever API (.NET)
+      │
+      ▼
+Azure OpenAI
+      │
+      ▼
+Response
+
+
+
+
+Add side services:
+Entra ID
+Key Vault
+Azure Monitor
+
