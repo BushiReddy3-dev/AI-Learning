@@ -1,0 +1,55 @@
++------------------+
+|    Employee      |
++------------------+
+          |
+          v
++------------------+
+| MS Teams Portal  |
++------------------+
+          |
+          v
++-----------------------------+
+| Employee Exit Foundry Agent |
++-----------------------------+
+          |
+   +------+------+------+
+   |             |      |
+   v             v      v
+
++-----------+ +------+ +------------+
+| AI Search | | HRMS | | Ticketing  |
++-----------+ +------+ +------------+
+
+      |
+      v
+
++------------------+
+| SharePoint Docs  |
++------------------+
+
+Capabilities
+
+1. Search Exit Policy
+
+2. Asset Return Checklist
+
+3. Generate Email Draft
+
+4. Create Service Request
+
+5. Notify Manager
+
+6. Generate Exit Summary
+
+Security
+
+- Entra ID
+- RBAC
+- Managed Identity
+- Key Vault
+
+Monitoring
+
+- Azure Monitor
+- Log Analytics
+- Application Insights

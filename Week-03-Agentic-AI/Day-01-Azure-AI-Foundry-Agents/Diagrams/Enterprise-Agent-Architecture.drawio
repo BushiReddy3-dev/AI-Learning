@@ -1,0 +1,66 @@
+                   +-----------+
+                   |   User    |
+                   +-----------+
+                         |
+                         v
+
+             +----------------------+
+             |  Agent Orchestrator  |
+             +----------------------+
+                         |
+      +------------------+------------------+
+      |                  |                  |
+      v                  v                  v
+
++-------------+   +-------------+   +-------------+
+|   HR Agent  |   |  IT Agent   |   | ESG Agent   |
++-------------+   +-------------+   +-------------+
+
+      |                  |                  |
+      +------------------+------------------+
+                         |
+                         v
+
+              +------------------+
+              | Azure AI Search  |
+              +------------------+
+                         |
+                         v
+
+              +------------------+
+              | Azure OpenAI     |
+              +------------------+
+                         |
+                         v
+
+              +------------------+
+              | Enterprise Apps  |
+              +------------------+
+
+Applications
+
+- HRMS
+- ServiceNow
+- SQL
+- SharePoint
+- Azure DevOps
+
+Security
+
+- Entra ID
+- Managed Identity
+- RBAC
+- Key Vault
+
+Monitoring
+
+- Azure Monitor
+- Application Insights
+- Log Analytics
+
+Governance
+
+- Responsible AI
+- Cost Tracking
+- Audit Logs
+- Prompt Governance
